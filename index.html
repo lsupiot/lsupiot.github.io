@@ -2,50 +2,85 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas | Dev & UX Designer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dev"> 
-
-    <nav>
-        <div class="logo">Lucas.</div>
-        <button id="theme-toggle">Passer en mode UX/UI</button>
+<body data-theme="dev">
+    <nav class="site-nav" aria-label="Navigation principale">
+        <a class="logo" href="#top" aria-label="Lucas, retour à l'accueil">Lucas.</a>
+        <button id="theme-toggle" type="button" aria-pressed="false">Passer en mode UX/UI</button>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="top">
+        <p class="eyebrow">Portfolio • Développeur & UX designer</p>
         <h1>De l'idée à l'écran.</h1>
-        <p>Développeur multi-casquettes & UX Designer. À la recherche d'une alternance dans le Grand Est.</p>
-        <a href="mailto:lucas.supiot2@email.com" class="btn-primary">Me contacter</a>
+        <p class="hero-copy">Développeur multi-casquettes & UX Designer. À la recherche d'une alternance dans le Grand Est.</p>
+        <div class="hero-actions">
+            <a href="mailto:lucas.supiot2@email.com" class="btn-primary">Me contacter</a>
+        </div>
     </header>
 
     <main>
-        <section id="dev-section">
-            <h2>>_ Logique & Développement</h2>
-            <p>Fondations solides avec un BUT Informatique. Adepte du code propre et de l'apprentissage continu.</p>
-            <div class="cards">
-                <div class="card">
-                    <h3>GitHub - Projets OpenClassrooms</h3>
-                    <a href="https://github.com/lsupiot" target="_blank">Voir les dépôts</a>
-                </div>
-                <div class="card">
-                    <h3>Unity - Brick Breaker</h3>
+        <section id="dev-section" class="panel" aria-labelledby="dev-title">
+            <div class="section-heading">
+                <p class="section-kicker">Code</p>
+                <h2 id="dev-title">>_ Logique & Développement</h2>
+            </div>
+            <p class="section-copy">Fondations solides avec un BUT Informatique. Adepte du code propre et de l'apprentissage continu.</p>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <p class="card-tag">OpenClassrooms</p>
+                    <h3>GitHub — Projets personnels</h3>
+                    <p>Répertoire des dépôts publics et des exercices d'apprentissage.</p>
+                    <a href="https://github.com/lsupiot" target="_blank" rel="noopener noreferrer">Voir les dépôts</a>
+                </article>
+
+                <article class="card">
+                    <p class="card-tag">Jeu</p>
+                    <h3>Unity — Brick Breaker</h3>
                     <p>Développement de jeu (Unity/C#) pour découvrir le monde de la 3D.</p>
-                    <a href="https://play.unity.com/en/user/a62d0548-a9d5-411b-aab2-ef12aff57808" target="_blank">Jouer sur Unity Play</a>
-                </div>
+                    <a href="https://play.unity.com/en/user/a62d0548-a9d5-411b-aab2-ef12aff57808" target="_blank" rel="noopener noreferrer">Jouer sur Unity Play</a>
+                </article>
             </div>
         </section>
 
-        <!-- Section Design (iframes Figma) -->
-        <section id="design-section">
-            <h2>Conception & Empathie</h2>
-            <p>Un passage en Master d'ergonomie m'a appris à placer l'utilisateur au centre, mais le besoin de créer concrètement a pris le dessus.</p>
-            <div class="figma-embeds">
-                <div class="embed">
-                    <h3>Application Metz Tour</h3>
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" allowfullscreen></iframe>                </div>
-                <div class="embed">
-                    <h3>Interface Musée</h3>
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" allowfullscreen></iframe>                </div>
+        <section id="design-section" class="panel" aria-labelledby="design-title">
+            <div class="section-heading">
+                <p class="section-kicker">Design</p>
+                <h2 id="design-title">Conception & Empathie</h2>
+            </div>
+            <p class="section-copy">Un passage en Master d'ergonomie m'a appris à placer l'utilisateur au centre, mais le besoin de créer concrètement a pris le dessus.</p>
+
+            <div class="figma-grid">
+                <article class="embed-card">
+                    <div class="embed-copy">
+                        <p class="card-tag">Prototype</p>
+                        <h3>Application Metz Tour</h3>
+                        <p>Prototype interactif pour une expérience touristique et accessible.</p>
+                    </div>
+                    <iframe
+                        title="Prototype de l'application Metz Tour"
+                        src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </article>
+
+                <article class="embed-card">
+                    <div class="embed-copy">
+                        <p class="card-tag">Prototype</p>
+                        <h3>Interface Musée</h3>
+                        <p>Étude exploratoire de l'interface pour enrichir l'expérience utilisateur.</p>
+                    </div>
+                    <iframe
+                        title="Prototype d'interface musée"
+                        src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </article>
             </div>
         </section>
     </main>
