@@ -1,44 +1,68 @@
+/* Dev */
+:root {
+    --bg-color: #0d1117; /* Noir GitHub */
+    --text-color: #c9d1d9; /* Gris clair */
+    --accent-color: #58a6ff; /* Bleu Dev */
+    --font-family: 'Courier New', Courier, monospace;
+    --card-bg: #161b22;
+}
+
+/* Design */
+[data-theme="design"] {
+    --bg-color: #fafafa; 
+    --text-color: #333333; 
+    --accent-color: #ff7262; 
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --card-bg: #ffffff;
+}
+
+/* Style général */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    /* Transi */
+    transition: background-color 0.5s ease, color 0.5s ease;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-header {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.btn {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-section {
-    padding: 3rem 10%;
-}
-
-.project-grid {
+nav {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 10%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-.project-card {
-    border: 1px solid #ddd;
+button#theme-toggle {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+button#theme-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.hero, section {
+    padding: 60px 10%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(128, 128, 128, 0.2);
     padding: 20px;
     border-radius: 8px;
-    flex: 1;
+    margin-bottom: 20px;
+    transition: background-color 0.5s ease;
 }
 
-.figma-container iframe {
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+a {
+    color: var(--accent-color);
 }

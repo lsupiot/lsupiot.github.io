@@ -2,45 +2,54 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio | Développeur & UX/UI Designer</title>
+    <title>Lucas | Dev & UX Designer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body data-theme="dev"> 
 
-<body>
-    <header>
-        <div class="hero">
-            <h1>Bonjour, je suis ...</h1>
-            <h2>Développeur Multi-casquettes & Web Designer</h2>
-            <p>Je conçois et développe des expériences numériques interactives. Actuellement à la recherche d'une alternance en conception logicielle et UX Design dans le Grand Est.</p>
-            <a href="mailto:ton.email@email.com" class="btn">Me contacter</a>
-        </div>
+    <nav>
+        <div class="logo">Lucas.</div>
+        <button id="theme-toggle">Passer en mode UX/UI</button>
+    </nav>
+
+    <header class="hero">
+        <h1>De l'idée à l'écran.</h1>
+        <p>Développeur multi-casquettes & UX Designer. À la recherche d'une alternance dans le Grand Est.</p>
+        <a href="mailto:lucas.supiot2@email.com" class="btn-primary">Me contacter</a>
     </header>
 
-    <section id="design">
-        <h2>Mes Conceptions d'Interfaces</h2>
-        <p>Aperçu interactif de mes maquettes directement depuis Figma.</p>
-        
-        <div class="figma-container">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <section id="dev">
-        <h2>Développement & Jeux Vidéo</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Projet Unity</h3>
-                <p>test</p>
-                <a href="#">Voir le projet</a>
+    <main>
+        <section id="dev-section">
+            <h2>>_ Logique & Développement</h2>
+            <p>Fondations solides avec un BUT Informatique. Adepte du code propre et de l'apprentissage continu.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>GitHub - Projets OpenClassrooms</h3>
+                    <a href="https://github.com/lsupiot" target="_blank">Voir les dépôts</a>
+                </div>
+                <div class="card">
+                    <h3>Unity - Brick Breaker</h3>
+                    <p>Développement de jeu (Unity/C#) pour découvrir le monde de la 3D.</p>
+                    <a href="https://play.unity.com/en/user/a62d0548-a9d5-411b-aab2-ef12aff57808" target="_blank">Jouer sur Unity Play</a>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>test</h3>
-                <p>test</p>
-                <a href="#">Voir le code source</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Section Design (iframes Figma) -->
+        <section id="design-section">
+            <h2>Conception & Empathie</h2>
+            <p>Un passage en Master d'ergonomie m'a appris à placer l'utilisateur au centre, mais le besoin de créer concrètement a pris le dessus.</p>
+            <div class="figma-embeds">
+                <div class="embed">
+                    <h3>Application Metz Tour</h3>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" allowfullscreen></iframe>                </div>
+                <div class="embed">
+                    <h3>Interface Musée</h3>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" allowfullscreen></iframe>                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
