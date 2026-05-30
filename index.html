@@ -3,87 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas | Dev & UX Designer</title>
+    <title>Portfolio Figma-style | Lucas Supiot</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dev">
-    <nav class="site-nav" aria-label="Navigation principale">
-        <a class="logo" href="#top" aria-label="Lucas, retour à l'accueil">Lucas.</a>
-        <button id="theme-toggle" type="button" aria-pressed="false">Passer en mode UX/UI</button>
-    </nav>
-
-    <header class="hero" id="top">
-        <p class="eyebrow">Portfolio • Développeur & UX designer</p>
-        <h1>De l'idée à l'écran.</h1>
-        <p class="hero-copy">Développeur multi-casquettes & UX Designer. À la recherche d'une alternance dans le Grand Est.</p>
-        <div class="hero-actions">
-            <a href="mailto:lucas.supiot2@email.com" class="btn-primary">Me contacter</a>
-        </div>
-    </header>
-
-    <main>
-        <section id="dev-section" class="panel" aria-labelledby="dev-title">
-            <div class="section-heading">
-                <p class="section-kicker">Code</p>
-                <h2 id="dev-title">>_ Logique & Développement</h2>
+<body data-theme="dark" data-daltonism="normal">
+    <div class="app-shell">
+        <aside class="sidebar panel panel-left" aria-label="Navigation Pages et Layers">
+            <div class="panel-header">
+                <p class="panel-label">Pages</p>
+                <h1 class="panel-title">Portfolio</h1>
             </div>
-            <p class="section-copy">Fondations solides avec un BUT Informatique. Adepte du code propre et de l'apprentissage continu.</p>
 
-            <div class="cards-grid">
-                <article class="card">
-                    <p class="card-tag">OpenClassrooms</p>
-                    <h3>GitHub — Projets personnels</h3>
-                    <p>Répertoire des dépôts publics et des exercices d'apprentissage.</p>
-                    <a href="https://github.com/lsupiot" target="_blank" rel="noopener noreferrer">Voir les dépôts</a>
+            <nav class="panel-body" aria-label="Liste des sections du portfolio">
+                <ul class="nav-list" role="list">
+                    <li><button class="nav-item active" type="button" data-section="accueil" aria-controls="canvas-content">Accueil</button></li>
+                    <li><button class="nav-item" type="button" data-section="projets" aria-controls="canvas-content">Projets</button></li>
+                    <li><button class="nav-item" type="button" data-section="ux" aria-controls="canvas-content">UX & Design</button></li>
+                    <li><button class="nav-item" type="button" data-section="contact" aria-controls="canvas-content">Contact</button></li>
+                </ul>
+            </nav>
+
+            <div class="panel-footer">
+                <p class="panel-note">Cliquez sur un item pour mettre à jour le canvas central sans recharger la page.</p>
+            </div>
+        </aside>
+
+        <main class="canvas panel panel-center" id="canvas-content" role="main">
+            <section class="canvas-frame" aria-labelledby="canvas-title">
+                <div class="canvas-topbar">
+                    <span class="canvas-badge">Canvas</span>
+                    <h2 id="canvas-title">Bienvenu·e sur mon portfolio</h2>
+                </div>
+
+                <p class="canvas-subtitle">Un espace de présentation pensé comme un véritable écran de travail Figma.</p>
+
+                <article class="canvas-copy">
+                    <p class="lead-copy" id="canvas-lead">Ce template est préparé pour recevoir ton contenu : titre, paragraphe, visuels et prototype intégré.</p>
+                    <p id="canvas-text">Utilise ce canevas pour montrer tes meilleurs projets, le parcours UX/UI, et des démonstrations interactives. Le contenu change dynamiquement depuis le panneau gauche.</p>
                 </article>
 
-                <article class="card">
-                    <p class="card-tag">Jeu</p>
-                    <h3>Unity — Brick Breaker</h3>
-                    <p>Développement de jeu (Unity/C#) pour découvrir le monde de la 3D.</p>
-                    <a href="https://play.unity.com/en/user/a62d0548-a9d5-411b-aab2-ef12aff57808" target="_blank" rel="noopener noreferrer">Jouer sur Unity Play</a>
-                </article>
-            </div>
-        </section>
+                <div class="canvas-media">
+                    <figure class="canvas-card canvas-image-card">
+                        <div class="image-placeholder" aria-hidden="true"></div>
+                        <figcaption id="canvas-image-caption">Image de projet (placeholder)</figcaption>
+                    </figure>
 
-        <section id="design-section" class="panel" aria-labelledby="design-title">
-            <div class="section-heading">
-                <p class="section-kicker">Design</p>
-                <h2 id="design-title">Conception & Empathie</h2>
-            </div>
-            <p class="section-copy">Un passage en Master d'ergonomie m'a appris à placer l'utilisateur au centre, mais le besoin de créer concrètement a pris le dessus.</p>
+                    <section class="canvas-card canvas-iframe-card" aria-labelledby="iframe-label">
+                        <div class="iframe-header">
+                            <span id="iframe-label">Iframe prototype</span>
+                        </div>
+                        <iframe id="canvas-iframe" title="Aperçu prototype" src="about:blank" loading="lazy"></iframe>
+                    </section>
+                </div>
+            </section>
+        </main>
 
-            <div class="figma-grid">
-                <article class="embed-card">
-                    <div class="embed-copy">
-                        <p class="card-tag">Prototype</p>
-                        <h3>Application Metz Tour</h3>
-                        <p>Prototype interactif pour une expérience touristique et accessible.</p>
-                    </div>
-                    <iframe
-                        title="Prototype de l'application Metz Tour"
-                        src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-                </article>
-
-                <article class="embed-card">
-                    <div class="embed-copy">
-                        <p class="card-tag">Prototype</p>
-                        <h3>Interface Musée</h3>
-                        <p>Étude exploratoire de l'interface pour enrichir l'expérience utilisateur.</p>
-                    </div>
-                    <iframe
-                        title="Prototype d'interface musée"
-                        src="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-                </article>
+        <aside class="sidebar panel panel-right" aria-label="Outils d’accessibilité et ergonomie">
+            <div class="panel-header">
+                <p class="panel-label">Properties</p>
+                <h1 class="panel-title">Outils</h1>
             </div>
-        </section>
-    </main>
+
+            <section class="control-panel" aria-labelledby="theme-controls-title">
+                <div class="control-heading">
+                    <p class="control-label">Thème</p>
+                    <h2 id="theme-controls-title">Mode couleur</h2>
+                </div>
+                <button class="control-button" type="button" data-action="toggle-theme" aria-pressed="false">Activer mode clair</button>
+            </section>
+
+            <details class="control-panel" open>
+                <summary class="control-summary">Typographie</summary>
+                <div class="control-grid">
+                    <button class="control-button" type="button" data-action="decrease-font">A-</button>
+                    <button class="control-button" type="button" data-action="increase-font">A+</button>
+                </div>
+            </details>
+
+            <details class="control-panel" open>
+                <summary class="control-summary">Palette daltonienne</summary>
+                <div class="control-group">
+                    <label class="select-label" for="daltonism-select">
+                        <span>Mode daltonisme</span>
+                        <select id="daltonism-select" aria-label="Choisir une palette daltonienne">
+                            <option value="normal">Normal</option>
+                            <option value="protanopia">Protanopie</option>
+                            <option value="deuteranopia">Déuteranopie</option>
+                            <option value="tritanopia">Tritanopie</option>
+                        </select>
+                    </label>
+                    <button class="control-button" type="button" data-action="toggle-contrast" aria-pressed="false">Contraste élevé</button>
+                </div>
+            </details>
+
+            <details class="control-panel" open>
+                <summary class="control-summary">Confort de lecture</summary>
+                <div class="control-grid">
+                    <button class="control-button" type="button" data-action="toggle-line-spacing" aria-pressed="false">Interlignage</button>
+                    <button class="control-button" type="button" data-action="toggle-letter-spacing" aria-pressed="false">Espacement</button>
+                </div>
+            </details>
+
+            <div class="panel-footer">
+                <p class="panel-note">Tous les réglages s’appliquent immédiatement sur le canvas central, sans recharger la page.</p>
+            </div>
+        </aside>
+    </div>
 
     <script src="script.js"></script>
 </body>
