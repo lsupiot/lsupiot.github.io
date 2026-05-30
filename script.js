@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvasIframe = document.getElementById('canvas-iframe');
     const themeButton = document.querySelector('[data-action="toggle-theme"]');
     const daltonismSelect = document.getElementById('daltonism-select');
+    const homeButton = document.getElementById('home-button');
+    const contactButton = document.getElementById('contact-button');
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+    const searchNote = document.getElementById('search-note');
     const root = document.documentElement;
 
     const sections = {
@@ -46,6 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxScale = 1.35;
     const scaleStep = 0.08;
 
+    const highlightTargets = [canvasTitle, canvasLead, canvasText];
+
+    const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    const clearHighlights = () => {
+        highlightTargets.forEach((element) => {
+            if (element.dataset.originalText) {
+                element.textContent = element.dataset.originalText;
+            }
+        });
+        if (searchNote) {
+            searchNote.textContent = '';
+        }
+    };
+
     const updateCanvas = (sectionKey) => {
         const section = sections[sectionKey];
         if (!section) return;
@@ -55,11 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
         canvasText.textContent = section.text;
         canvasImageCaption.textContent = section.imageCaption;
         canvasIframe.setAttribute('src', section.iframeSrc);
+
+        highlightTargets.forEach((element) => {
+            element.dataset.originalText = element.textContent;
+        });
+        clearHighlights();
     };
 
-    const setActiveNav = (button) => {
-        navItems.forEach((item) => item.classList.remove('active'));
-        button.classList.add('active');
+    const setActiveNav = (sectionKey) => {
+        navItems.forEach((item) => {
+            item.classList.toggle('active', item.dataset.section === sectionKey);
+        });
+    };
+
+    const scrollToFirstHighlight = () => {
+        const first = document.querySelector('.highlighted-text');
+        if (first) {
+            first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     };
 
     const setTheme = (theme) => {
@@ -90,11 +123,44 @@ document.addEventListener('DOMContentLoaded', () => {
         body.dataset.daltonism = value;
     };
 
+    const activateSection = (sectionKey) => {
+        setActiveNav(sectionKey);
+        updateCanvas(sectionKey);
+    };
+
+    const searchContent = (query) => {
+        clearHighlights();
+
+        if (!query.trim()) {
+            if (searchNote) searchNote.textContent = 'Entrez un mot-clé pour rechercher.';
+            return;
+        }
+
+        const escapedQuery = escapeRegExp(query.trim());
+        const searchRegex = new RegExp(`(${escapedQuery})`, 'gi');
+        let totalMatches = 0;
+
+        highlightTargets.forEach((element) => {
+            const original = element.dataset.originalText || element.textContent;
+            const highlighted = original.replace(searchRegex, '<span class="highlighted-text">$1</span>');
+            const matchCount = (original.match(new RegExp(escapedQuery, 'gi')) || []).length;
+            totalMatches += matchCount;
+            element.innerHTML = highlighted;
+        });
+
+        if (searchNote) {
+            searchNote.textContent = totalMatches > 0 ? `${totalMatches} résultat(s) trouvé(s).` : 'Aucun résultat trouvé.';
+        }
+
+        if (totalMatches > 0) {
+            scrollToFirstHighlight();
+        }
+    };
+
     document.querySelector('.nav-list').addEventListener('click', (event) => {
         const target = event.target.closest('.nav-item');
         if (!target) return;
-        setActiveNav(target);
-        updateCanvas(target.dataset.section);
+        activateSection(target.dataset.section);
     });
 
     document.querySelector('.panel-right').addEventListener('click', (event) => {
@@ -129,6 +195,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (daltonismSelect) {
         daltonismSelect.addEventListener('change', (event) => {
             setDaltonism(event.target.value);
+        });
+    }
+
+    if (homeButton) {
+        homeButton.addEventListener('click', () => activateSection('accueil'));
+    }
+
+    if (contactButton) {
+        contactButton.addEventListener('click', () => activateSection('contact'));
+    }
+
+    if (searchForm) {
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            searchContent(searchInput.value);
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            if (!searchInput.value.trim()) clearHighlights();
         });
     }
 

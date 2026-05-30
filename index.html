@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark" data-daltonism="normal">
+    <header class="global-header" role="banner">
+        <button class="header-link" type="button" id="home-button" aria-label="Retour à l’accueil">Lucas.</button>
+
+        <form class="search-form" id="search-form" role="search" aria-label="Recherche dans le portfolio">
+            <label class="search-label" for="search-input">Rechercher</label>
+            <div class="search-group">
+                <input id="search-input" class="search-input" type="search" placeholder="Ctrl+F / Find…" aria-label="Recherche dans le contenu" autocomplete="off">
+                <button class="search-button" type="submit">Rechercher</button>
+            </div>
+            <p class="search-note" id="search-note" aria-live="polite"></p>
+        </form>
+
+        <button class="header-link" type="button" id="contact-button" aria-label="Aller à la page contact">Contact</button>
+    </header>
+
     <div class="app-shell">
         <aside class="sidebar panel panel-left" aria-label="Navigation Pages et Layers">
             <div class="panel-header">

@@ -28,12 +28,12 @@ body {
     margin: 0;
     min-height: 100vh;
     min-width: 320px;
-    height: 100vh;
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--text);
     background-color: var(--bg);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body[data-theme='light'] {
@@ -98,6 +98,87 @@ body {
     padding: 1rem;
 }
 
+.global-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: auto minmax(320px, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface-strong);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.header-link,
+.search-button {
+    appearance: none;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface-mid);
+    color: var(--text);
+    padding: 0.8rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.header-link:hover,
+.search-button:hover,
+.header-link:focus-visible,
+.search-button:focus-visible {
+    outline: none;
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.search-form {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.search-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+}
+
+.search-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.search-input {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface-mid);
+    color: var(--text);
+    padding: 0.9rem 1rem;
+    font: inherit;
+}
+
+.search-input:focus-visible {
+    outline: 2px solid var(--accent);
+}
+
+.search-note {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+    min-height: 1.2rem;
+}
+
+.highlighted-text {
+    background: rgba(250, 229, 90, 0.5);
+    color: #101010;
+    border-radius: 4px;
+    padding: 0.05em 0.14em;
+}
+
 .panel {
     display: flex;
     flex-direction: column;
@@ -105,7 +186,7 @@ body {
     min-height: 0;
     background: var(--surface-mid);
     border: 1px solid var(--border);
-    border-radius: var(--panel-radius);
+    border-radius: 0;
     box-shadow: var(--shadow);
     overflow: hidden;
 }
@@ -395,6 +476,15 @@ body {
 @media (max-width: 768px) {
     .app-shell {
         gap: 0.85rem;
+    }
+
+    .global-header {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+    .search-group {
+        grid-template-columns: 1fr;
     }
 
     .control-grid {
