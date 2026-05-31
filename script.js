@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul>
                     <li><strong>Technique :</strong> Diplômé d'un BUT Informatique (Parcours Réalisation d'applications) à l'IUT de La Rochelle.</li>
                     <li><strong>Ergonomie :</strong> J'ai ensuite intégré un Master 1 en Ergonomie à l'UFR SHS de Metz pour approfondir la psychologie cognitive et les méthodologies de tests utilisateurs.</li>
-                    <li><strong>Le Choix du concret :</strong> J'ai fait le choix d'arrêter ce master car son approche était trop théorique, ce qui a confirmé mon besoin viscéral de pratique et de création concrète.</li>
+                    <li><strong>Le Choix du concret :</strong> J'ai fait le choix d'arrêter ce master car son approche était trop théorique, ce qui a confirmé mon besoin de pratique et de création concrète.</li>
                 </ul>
 
                 <h3 id="area-experiences">💼 Expériences Professionnelles</h3>
@@ -43,12 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <h3 id="area-objectif">🎯 Mon Objectif Actuel</h3>
                 <p>Je suis activement à la recherche d'une <strong>alternance UI / Webdesigner d'une durée de 1 an</strong>, disponible sur Strasbourg et dans la région Grand Est.</p>
+                <p><a href="assets/CV_Lucas_SUPIOT.pdf" target="_blank" rel="noopener">📄 Consulter mon CV depuis ce PDF</a></p>
+
             `,
             imageCaption: 'Lucas Supiot - Développeur Front-end &amp; UX/UI Designer',
             iframeSrc: 'about:blank'
         },
         projets: {
-            title: '💻 Ingénierie &amp; Développement Front-End',
+            title: '💻 Développement Full-Stack',
             useHTML: true,
             showIframe: false,
             htmlContent: `
@@ -201,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         clearHighlights();
-        updateLayerList();
+        updateLayerList(sectionKey);
     };
 
     const setActiveNav = (sectionKey) => {
@@ -210,11 +212,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const updateLayerList = () => {
+    const updateLayerList = (sectionKey) => {
         if (!layerListElement) return;
 
         const headings = Array.from(document.querySelectorAll('.canvas-copy h3'));
         if (!headings.length) {
+            if (sectionKey === 'contact') {
+                layerListElement.innerHTML = `
+                    <li>
+                        <button class="layer-item" type="button" data-scroll-target="canvas-title">Contact</button>
+                    </li>
+                `;
+                return;
+            }
             layerListElement.innerHTML = '<li class="layer-placeholder">Aucun titre h3 disponible</li>';
             return;
         }
