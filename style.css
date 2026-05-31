@@ -234,6 +234,65 @@ body {
 
 .panel-body {
     overflow: auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.sidebar-split {
+    display: grid;
+    gap: 1rem;
+}
+
+.sidebar-section {
+    overflow: auto;
+    max-height: calc(42vh - 1rem);
+    padding-right: 0.5rem;
+}
+
+.sidebar-section-title {
+    margin: 0 0 0.75rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.layer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.layer-item {
+    width: 100%;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 0.95rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.layer-item:hover,
+.layer-item:focus-visible {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(124, 156, 255, 0.32);
+    transform: translateY(-1px);
+}
+
+.canvas-copy video {
+    width: 100%;
+    border-radius: 16px;
+    max-height: 420px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: var(--surface-mid);
 }
 
 .panel-footer {
@@ -379,7 +438,9 @@ body {
 
 .canvas-iframe {
     width: 100%;
-    min-height: 260px;
+    min-height: 780px;
+    height: 78vh;
+    max-height: 920px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
     background: var(--surface-mid);

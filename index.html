@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Figma-style | Lucas Supiot</title>
+    <title>Portfolio | Lucas Supiot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark" data-daltonism="normal">
@@ -30,12 +30,28 @@
             </div>
 
             <nav class="panel-body" aria-label="Liste des sections du portfolio">
-                <ul class="nav-list" role="list">
-                    <li><button class="nav-item active" type="button" data-section="accueil" aria-controls="canvas-content">Accueil</button></li>
-                    <li><button class="nav-item" type="button" data-section="projets" aria-controls="canvas-content">Projets</button></li>
-                    <li><button class="nav-item" type="button" data-section="ux" aria-controls="canvas-content">UX & Design</button></li>
-                    <li><button class="nav-item" type="button" data-section="contact" aria-controls="canvas-content">Contact</button></li>
-                </ul>
+                <div class="sidebar-split">
+                    <section class="sidebar-section sidebar-pages" aria-labelledby="sidebar-pages-title">
+                        <h2 id="sidebar-pages-title" class="sidebar-section-title">Pages</h2>
+                        <ul class="nav-list" role="list">
+                            <li><button class="nav-item active" type="button" data-section="accueil" aria-controls="canvas-content">Présentation</button></li>
+                            <li><button class="nav-item" type="button" data-section="ux" aria-controls="canvas-content">Projets UX/UI</button></li>
+                            <li><button class="nav-item" type="button" data-section="projets" aria-controls="canvas-content">Projets Dev</button></li>
+                            <li><button class="nav-item" type="button" data-section="contact" aria-controls="canvas-content">Contact</button></li>
+                        </ul>
+                    </section>
+
+                    <section class="sidebar-section sidebar-layers" aria-labelledby="sidebar-layers-title">
+                        <h2 id="sidebar-layers-title" class="sidebar-section-title">Layers</h2>
+                        <ul class="layer-list" role="list">
+                            <li><button class="layer-item" type="button" data-scroll-target="area-parcours">Parcours</button></li>
+                            <li><button class="layer-item" type="button" data-scroll-target="area-experiences">Expériences</button></li>
+                            <li><button class="layer-item" type="button" data-scroll-target="area-objectif">Objectif</button></li>
+                            <li><button class="layer-item" type="button" data-scroll-target="area-scanart">Scan'Art</button></li>
+                            <li><button class="layer-item" type="button" data-scroll-target="area-metz-tour">Metz Tour</button></li>
+                        </ul>
+                    </section>
+                </div>
             </nav>
 
             <div class="panel-footer">
@@ -44,30 +60,23 @@
         </aside>
 
         <main class="canvas panel panel-center" id="canvas-content" role="main">
-            <section class="canvas-frame" aria-labelledby="canvas-title">
-                <div class="canvas-topbar">
+            <section class="canvas-frame" id="canvas-frame" aria-labelledby="canvas-title" tabindex="-1">
+                <div class="canvas-topbar" id="canvas-topbar" tabindex="-1">
                     <span class="canvas-badge">Canvas</span>
-                    <h2 id="canvas-title">Bienvenu·e sur mon portfolio</h2>
+                    <h2 id="canvas-title">👋 Bonjour, je suis Lucas SUPIOT</h2>
                 </div>
 
-                <p class="canvas-subtitle">Un espace de présentation pensé comme un véritable écran de travail Figma.</p>
-
-                <article class="canvas-copy">
-                    <p class="lead-copy" id="canvas-lead">Ce template est préparé pour recevoir ton contenu : titre, paragraphe, visuels et prototype intégré.</p>
-                    <p id="canvas-text">Utilise ce canevas pour montrer tes meilleurs projets, le parcours UX/UI, et des démonstrations interactives. Le contenu change dynamiquement depuis le panneau gauche.</p>
+                <article class="canvas-copy" id="canvas-copy" tabindex="-1">
+                    <p class="lead-copy" id="canvas-lead"><strong>Développeur Front-end &amp; UX/UI Designer</strong></p>
+                    <p id="canvas-text">Issu d'un BUT Informatique, j'ai eu un véritable déclic pour l'UX/UI en créant des Design Systems. Mon objectif est de lier l'exigence créative de l'UX/UI à mon bagage de développeur pour concevoir des plateformes numériques immersives, performantes et accessibles à tous.</p>
                 </article>
 
-                <div class="canvas-media">
-                    <figure class="canvas-card canvas-image-card">
-                        <div class="image-placeholder" aria-hidden="true"></div>
-                        <figcaption id="canvas-image-caption">Image de projet (placeholder)</figcaption>
-                    </figure>
-
-                    <section class="canvas-card canvas-iframe-card" aria-labelledby="iframe-label">
+                <div class="canvas-media" id="canvas-media" tabindex="-1">
+                    <section class="canvas-card canvas-iframe-card" id="canvas-prototype-card" aria-labelledby="iframe-label" tabindex="-1">
                         <div class="iframe-header">
                             <span id="iframe-label">Iframe prototype</span>
                         </div>
-                        <iframe id="canvas-iframe" title="Aperçu prototype" src="about:blank" loading="lazy"></iframe>
+                        <iframe class="canvas-iframe" id="canvas-iframe" title="Aperçu prototype" src="about:blank" loading="lazy"></iframe>
                     </section>
                 </div>
             </section>

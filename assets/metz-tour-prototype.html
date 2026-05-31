@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Metz Tour</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, sans-serif;
+            color: #0f172a;
+            background: #f8fafc;
+        }
+        .frame {
+            display: grid;
+            gap: 18px;
+            padding: 20px;
+        }
+        .panel {
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+            padding: 18px;
+        }
+        h1 {
+            margin: 0 0 12px;
+            font-size: 1.5rem;
+        }
+        p {
+            margin: 0 0 12px;
+            line-height: 1.6;
+            color: #334155;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #38bdf8;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+        }
+        .card {
+            background: #eef2ff;
+            border-radius: 16px;
+            padding: 16px;
+        }
+        .card h2 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+        .card p {
+            margin: 0;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="panel">
+            <span class="badge">Prototype</span>
+            <h1>Metz Tour</h1>
+            <p>Prototype interactif de l'application de gamification urbaine : parcours, filtres de lieux et badges de succès.</p>
+        </div>
+
+        <div class="panel card-grid">
+            <div class="card">
+                <h2>Carte interactive</h2>
+                <p>Affiche les points d'intérêt avec des filtres de visite.</p>
+            </div>
+            <div class="card">
+                <h2>Badges</h2>
+                <p>Récompense l'utilisateur avec des objectifs ludiques.</p>
+            </div>
+            <div class="card">
+                <h2>Parcours</h2>
+                <p>Permet de créer une balade personnalisée en ville.</p>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Expérience</h2>
+            <p>Le prototype met en avant une exploration fluide, des éléments UI clairs et une navigation pensée pour les touristes comme pour les habitants.</p>
+        </div>
+    </div>
+</body>
+</html>
