@@ -13,38 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const daltonismSelect = document.getElementById('daltonism-select');
     const homeButton = document.getElementById('home-button');
     const contactButton = document.getElementById('contact-button');
-    const searchForm = document.getElementById('search-form');
-    const searchInput = document.getElementById('search-input');
-    const searchNote = document.getElementById('search-note');
     const root = document.documentElement;
 
     const sections = {
         accueil: {
-            title: '👋 Bonjour, je suis Lucas SUPIOT',
+            title: 'Présentation & Parcours',
             useHTML: true,
             showIframe: false,
             htmlContent: `
-                <p class="lead-copy" id="canvas-lead"><strong>Développeur Front-end &amp; UX/UI Designer</strong></p>
-                <p id="canvas-text">Issu d'un BUT Informatique, j'ai eu un véritable déclic pour l'UX/UI en créant des Design Systems. Mon objectif est de lier l'exigence créative de l'UX/UI à mon bagage de développeur pour concevoir des plateformes numériques immersives, performantes et accessibles à tous.</p>
+                <div class="profile-grid">
+                    <div>
+                        <p class="lead-copy" id="canvas-lead"><strong>Je m'appelle Lucas et je suis Développeur FS de formation, avec une passion grandissante pour l'UX/UI Design.</strong></p>
+                        <p id="canvas-text">Je souhaite combiner l'exigence créative du design avec mon bagage technique pour concevoir des solutions immersives, performantes et accessibles à tous.</p>
+                    </div>
+                    <div class="hero-card accent-panel">
+                        <h3>Profil hybride</h3>
+                        <p>Un parcours tech &amp; design orienté vers la pratique, le prototypage et l'expérience utilisateur.</p>
+                    </div>
+                </div>
 
-                <h3 id="area-parcours">🧠 Mon Parcours : De la technique à l'humain</h3>
-                <ul>
-                    <li><strong>Technique :</strong> Diplômé d'un BUT Informatique (Parcours Réalisation d'applications) à l'IUT de La Rochelle.</li>
-                    <li><strong>Ergonomie :</strong> J'ai ensuite intégré un Master 1 en Ergonomie à l'UFR SHS de Metz pour approfondir la psychologie cognitive et les méthodologies de tests utilisateurs.</li>
-                    <li><strong>Le Choix du concret :</strong> J'ai fait le choix d'arrêter ce master car son approche était trop théorique, ce qui a confirmé mon besoin de pratique et de création concrète.</li>
-                </ul>
+                <section id="area-parcours" class="profile-section">
+                    <h3>Mon parcours</h3>
+                    <p>Depuis gamin, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.</p>
+                    <p>C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France, en Moselle, et plus précisément à Metz en Master d'Ergonomie.</p>
+                    <div class="profile-timeline">
+                        <div><strong>Bac pro Informatique :</strong> premières bases en pratique, découverte du développement et de l'univers tech.</div>
+                        <div><strong>Bac STI2D :</strong> apprentissage de la théorie pour mieux comprendre les fondations techniques.</div>
+                        <div><strong>BUT Informatique à La Rochelle :</strong> trois années pour acquérir de solides bases en réalisation d'applications et en programmation.</div>
+                        <div><strong>Alternance en applicatif C++ mobile :</strong> immersion professionnelle axée sur les solutions mobiles.</div>
+                        <div><strong>Master d'Ergonomie à Metz :</strong> exploration de la psychologie cognitive, de la méthodologie des tests utilisateurs, des neurosciences comportementales, de l'ergonomie organisationnelle et de l'anatomie du corps humain.</div>
+                    </div>
+                    <p class="section-note">À travers ce long périple, j'ai découvert que j'aspirais surtout à la pratique concrète : le besoin de prototypage, de conception et de création m'a amené à arrêter cette formation trop théorique.</p>
+                </section>
 
-                <h3 id="area-experiences">💼 Expériences Professionnelles</h3>
-                <ul>
-                    <li><strong>Skydrone Robotics (Alternance)</strong> : Analyse et refonte des interfaces de télémétrie de stations de contrôle de drones pour réduire la charge cognitive des pilotes.</li>
-                    <li><strong>Musée d'Histoire Naturelle de La Rochelle</strong> : Digitalisation du parcours visiteur via la création de l'application mobile <strong>Scan'Art</strong>.</li>
-                    <li><strong>Projet Smart-Campus</strong> : Maquettage et conception d'un dashboard web axé sur la Data Visualization et l'UX (micro-copy).</li>
-                </ul>
+                <section id="area-experiences" class="profile-section">
+                    <h3>Expériences significatives</h3>
+                    <ul class="profile-list">
+                        <li><strong>Musée d'Histoire Naturelle de La Rochelle :</strong> en tant que Product Owner et Développeur Mobile, j'ai co-créé Scan'Art, une application gamifiée pour digitaliser le parcours visiteur. J'y ai découvert Figma pour la conception de l'Atomic Design, organisé des tests itératifs avec le public, et participé au développement sous Flutter.</li>
+                        <li><strong>Skydrone Robotics :</strong> pendant mon alternance, j'ai analysé et refondu l'ergonomie des interfaces de télémétrie de drones. Mon travail a consisté à traduire les besoins du terrain en maquettes fonctionnelles puis à les intégrer techniquement, avec pour but de réduire la charge cognitive des pilotes et de faciliter les missions de vol.</li>
+                        <li><strong>Smart-Campus :</strong> j'ai œuvré en tant que Webdesigner et Développeur FS pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.</li>
+                    </ul>
+                </section>
 
-                <h3 id="area-objectif">🎯 Mon Objectif Actuel</h3>
-                <p>Je suis activement à la recherche d'une <strong>alternance UI / Webdesigner d'une durée de 1 an</strong>, disponible sur Strasbourg et dans la région Grand Est.</p>
-                <p><a href="assets/CV_Lucas_SUPIOT.pdf" target="_blank" rel="noopener">📄 Consulter mon CV depuis ce PDF</a></p>
-
+                <section id="area-objectif" class="profile-section">
+                    <h3>Mon objectif</h3>
+                    <p>Aujourd'hui, je suis activement à la recherche d'une alternance en UI / Webdesign pour une durée d'un an. Je suis prêt à m'investir pour transformer des besoins complexes en interfaces fluides, de la phase d'idéation jusqu'à l'intégration technique.</p>
+                </section>
             `,
             imageCaption: 'Lucas Supiot - Développeur Front-end &amp; UX/UI Designer',
             iframeSrc: 'about:blank'
@@ -64,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Tests &amp; Qualité</strong> : Rédaction de tests BDD (Behavior Driven Development) et analyse via SonarQube (89.8% de couverture de code, zéro vulnérabilité).</li>
                     <li><strong>Back-End Optimisé</strong> : API PHP conteneurisée via Docker Multi-stage. Optimisation du stockage des ressources avec un bucket MinIO et conversion des images au format WebP.</li>
                 </ul>
+                <figure class="canvas-image-card">
+                    <img src="assets/Scanart.png" alt="Capture d'écran du miro de Scan'Art" />
+                    <figcaption>Scan'Art — Tableau de bord et gestion du travail.</figcaption>
+                </figure>
 
                 <h3 id="area-skydrone">🚁 Skydrone Robotics (Alternance)</h3>
                 <p>Développement d'applications et d'interfaces pour l'industrie des drones.</p>
@@ -96,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <h3 id="area-scanart">🏛️ Scan'Art : L'expérience muséale interactive</h3>
                 <p><strong>Contexte :</strong> Projet académique pour le Musée d'Histoire Naturelle de La Rochelle.</p>
-                <p><strong>Objectifs :</strong> Fluidifier la visite avec des enfants et donner envie de revenir grâce à des challenges, le tout jouable en totale autonomie (sans médiateurs) et hors ligne.</p>
+                <p><strong>Objectifs :</strong> Fluidifier la visite des enfants et donner envie de revenir grâce à des challenges, le tout jouable en totale autonomie (sans médiateurs) et hors ligne.</p>
 
                 <ul>
                     <li><strong>UI Design &amp; Atomic Design :</strong> Conception d'une bibliothèque de composants graphiques sur Figma pour assurer la parfaite cohérence visuelle de l'application.</li>
                     <li><strong>Personnalisation &amp; Gamification :</strong> Création d'une interface de création d'avatar pour immerger l'enfant dans l'aventure.</li>
-                    <li><strong>Recherche &amp; Tests Utilisateurs :</strong> Organisation de sessions de tests itératifs directement avec les visiteurs (et les enfants) pour ajuster l'ergonomie, valider l'histoire et faciliter la prise en main.</li>
+                    <li><strong>Recherche &amp; Tests Utilisateurs :</strong> Organisation de sessions de tests itératifs directement avec les visiteurs du musée pour ajuster l'ergonomie et valider l'histoire.</li>
                 </ul>
 
                 <h4>Démonstration du parcours utilisateur :</h4>
@@ -147,17 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const getHighlightTargets = () => [canvasTitle, document.getElementById('canvas-lead'), document.getElementById('canvas-text')].filter(Boolean);
 
     const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-    const clearHighlights = () => {
-        getHighlightTargets().forEach((element) => {
-            if (element.dataset.originalText) {
-                element.textContent = element.dataset.originalText;
-            }
-        });
-        if (searchNote) {
-            searchNote.textContent = '';
-        }
-    };
 
     const updateCanvas = (sectionKey) => {
         const section = sections[sectionKey];
@@ -282,35 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCanvas(sectionKey);
     };
 
-    const searchContent = (query) => {
-        clearHighlights();
-
-        if (!query.trim()) {
-            if (searchNote) searchNote.textContent = 'Entrez un mot-clé pour rechercher.';
-            return;
-        }
-
-        const escapedQuery = escapeRegExp(query.trim());
-        const searchRegex = new RegExp(`(${escapedQuery})`, 'gi');
-        let totalMatches = 0;
-
-        getHighlightTargets().forEach((element) => {
-            const original = element.dataset.originalText || element.textContent;
-            const highlighted = original.replace(searchRegex, '<span class="highlighted-text">$1</span>');
-            const matchCount = (original.match(new RegExp(escapedQuery, 'gi')) || []).length;
-            totalMatches += matchCount;
-            element.innerHTML = highlighted;
-        });
-
-        if (searchNote) {
-            searchNote.textContent = totalMatches > 0 ? `${totalMatches} résultat(s) trouvé(s).` : 'Aucun résultat trouvé.';
-        }
-
-        if (totalMatches > 0) {
-            scrollToFirstHighlight();
-        }
-    };
-
     document.querySelector('.nav-list').addEventListener('click', (event) => {
         const target = event.target.closest('.nav-item');
         if (!target) return;
@@ -373,19 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactButton) {
         contactButton.addEventListener('click', () => activateSection('contact'));
-    }
-
-    if (searchForm) {
-        searchForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            searchContent(searchInput.value);
-        });
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener('input', () => {
-            if (!searchInput.value.trim()) clearHighlights();
-        });
     }
 
     root.style.setProperty('--content-scale', fontScale);
