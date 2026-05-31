@@ -164,6 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getHighlightTargets = () => [canvasTitle, document.getElementById('canvas-lead'), document.getElementById('canvas-text')].filter(Boolean);
 
+    const clearHighlights = () => {
+        document.querySelectorAll('.highlighted-text').forEach((element) => {
+            element.classList.remove('highlighted-text');
+        });
+    };
+
     const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
     const updateCanvas = (sectionKey) => {
