@@ -23,20 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
             htmlContent: `
                 <div class="profile-grid">
                     <div>
-                        <p class="lead-copy" id="canvas-lead"><strong>Je m'appelle Lucas et je suis Développeur FS de formation, avec une passion grandissante pour l'UX/UI Design.</strong></p>
+                        <p class="lead-copy" id="canvas-lead"><strong>Je m'appelle Lucas et je suis Développeur Full-Stack de formation, avec une passion grandissante pour l'UX/UI Design.</strong></p>
                         <p id="canvas-text">Je souhaite combiner l'exigence créative du design avec mon bagage technique pour concevoir des solutions immersives, performantes et accessibles à tous.</p>
                     </div>
                     <div class="hero-card accent-panel">
                         <h3>Profil hybride</h3>
-                        <p>Un parcours tech &amp; design orienté vers la pratique, le prototypage et l'expérience utilisateur.</p>
+                        <p>Un parcours technique et design orienté vers la pratique, le prototypage et l'expérience utilisateur.</p>
                     </div>
                 </div>
 
                 <section id="area-parcours" class="profile-section">
                     <h3>Mon parcours</h3>
-                    <p>Depuis gamin, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.</p>
-                    <p>C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France, en Moselle, et plus précisément à Metz en Master d'Ergonomie.</p>
-                    <div class="profile-timeline">
+                    <p>Depuis petit, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.</p>
+                    <p>Par la suite, j'intègre le BUT Informatique à l'IUT de La Rochelle qui mêle pratique et théorie. Durant mes 3 années là-bas, j'ai acquis de solides bases en réalisation d'applications et en programmation. J'y ai découvert trois grands domaines du développement : l'applicatif, le web et le mobile. J'ai également eu la chance de pouvoir faire ma troisième année en alternance sur de l'applicatif C++ à destination du mobile. C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France en Moselle, et plus précisément à Metz, en Master d'Ergonomie.</p>                    <div class="profile-timeline">
                         <div><strong>Bac pro Informatique :</strong> premières bases en pratique, découverte du développement et de l'univers tech.</div>
                         <div><strong>Bac STI2D :</strong> apprentissage de la théorie pour mieux comprendre les fondations techniques.</div>
                         <div><strong>BUT Informatique à La Rochelle :</strong> trois années pour acquérir de solides bases en réalisation d'applications et en programmation.</div>
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <ul class="profile-list">
                         <li><strong>Musée d'Histoire Naturelle de La Rochelle :</strong> en tant que Product Owner et Développeur Mobile, j'ai co-créé Scan'Art, une application gamifiée pour digitaliser le parcours visiteur. J'y ai découvert Figma pour la conception de l'Atomic Design, organisé des tests itératifs avec le public, et participé au développement sous Flutter.</li>
                         <li><strong>Skydrone Robotics :</strong> pendant mon alternance, j'ai analysé et refondu l'ergonomie des interfaces de télémétrie de drones. Mon travail a consisté à traduire les besoins du terrain en maquettes fonctionnelles puis à les intégrer techniquement, avec pour but de réduire la charge cognitive des pilotes et de faciliter les missions de vol.</li>
-                        <li><strong>Smart-Campus :</strong> j'ai œuvré en tant que Webdesigner et Développeur FS pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.</li>
+                        <li><strong>Smart-Campus :</strong> j'ai œuvré en tant que Webdesigner et Développeur Full-Stack pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.</li>
                     </ul>
                 </section>
 
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Aujourd'hui, je suis activement à la recherche d'une alternance en UI / Webdesign pour une durée d'un an. Je suis prêt à m'investir pour transformer des besoins complexes en interfaces fluides, de la phase d'idéation jusqu'à l'intégration technique.</p>
                 </section>
             `,
-            imageCaption: 'Lucas Supiot - Développeur Front-end &amp; UX/UI Designer',
+            imageCaption: 'Lucas Supiot - Développeur Front-end et UX/UI Designer',
             iframeSrc: 'about:blank'
         },
         projets: {
@@ -71,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="lead-copy" id="canvas-lead">Mon approche du développement est guidée par l'optimisation, la maintenabilité et la qualité de l'interface utilisateur.</p>
                 <p id="canvas-text">Je couvre toute la chaîne technique, avec un focus particulier sur l'architecture, la fiabilité et la performance des applications.</p>
 
-                <h3 id="area-scanart">⚙️ Scan'Art : Architecture Mobile &amp; Backend</h3>
+                <h3 id="area-scanart">⚙️ Scan'Art : Architecture Mobile et Backend</h3>
                 <p>Sur ce projet de 6 mois, j'ai occupé le rôle de <strong>Product Owner</strong> (méthode Agile/Scrum) et de Développeur Mobile.</p>
                 <ul>
                     <li><strong>Front-End (Flutter/Dart)</strong> : Intégration front-end avec une architecture Clean Code respectant les maquettes Figma.</li>
-                    <li><strong>Tests &amp; Qualité</strong> : Rédaction de tests BDD (Behavior Driven Development) et analyse via SonarQube (89.8% de couverture de code, zéro vulnérabilité).</li>
+                    <li><strong>Tests et Qualité</strong> : Rédaction de tests BDD (Behavior Driven Development) et analyse via SonarQube (89.8% de couverture de code, zéro vulnérabilité).</li>
                     <li><strong>Back-End Optimisé</strong> : API PHP conteneurisée via Docker Multi-stage. Optimisation du stockage des ressources avec un bucket MinIO et conversion des images au format WebP.</li>
                 </ul>
                 <figure class="canvas-image-card">
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             iframeSrc: 'about:blank'
         },
         ux: {
-            title: '🎨 Projets UX/UI &amp; Prototypage',
+            title: '🎨 Projets UX/UI et Prototypage',
             useHTML: true,
             showIframe: true,
             htmlContent: `
@@ -117,9 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Objectifs :</strong> Fluidifier la visite des enfants et donner envie de revenir grâce à des challenges, le tout jouable en totale autonomie (sans médiateurs) et hors ligne.</p>
 
                 <ul>
-                    <li><strong>UI Design &amp; Atomic Design :</strong> Conception d'une bibliothèque de composants graphiques sur Figma pour assurer la parfaite cohérence visuelle de l'application.</li>
-                    <li><strong>Personnalisation &amp; Gamification :</strong> Création d'une interface de création d'avatar pour immerger l'enfant dans l'aventure.</li>
-                    <li><strong>Recherche &amp; Tests Utilisateurs :</strong> Organisation de sessions de tests itératifs directement avec les visiteurs du musée pour ajuster l'ergonomie et valider l'histoire.</li>
+                    <li><strong>UI Design et; Atomic Design :</strong> Conception d'une bibliothèque de composants graphiques sur Figma pour assurer la parfaite cohérence visuelle de l'application.</li>
+                    <li><strong>Personnalisation et Gamification :</strong> Création d'une interface de création d'avatar pour immerger l'enfant dans l'aventure.</li>
+                    <li><strong>Recherche et Tests Utilisateurs :</strong> Organisation de sessions de tests itératifs directement avec les visiteurs du musée pour ajuster l'ergonomie et valider l'histoire.</li>
                 </ul>
 
                 <h4>Démonstration du parcours utilisateur :</h4>
@@ -130,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </video>
                 <p><a href="assets/scanart_presentation.pdf" target="_blank" rel="noopener">📄 Consulter le PDF de présentation Scan'Art</a></p>
 
-                <h3 id="area-metz-tour">📍 Metz Tour : Gamification &amp; Exploration Urbaine</h3>
+                <h3 id="area-metz-tour">📍 Metz Tour : Gamification et Exploration Urbaine</h3>
                 <p><strong>Le défi :</strong> Comment inciter les touristes et les habitants de Metz à pratiquer une activité physique tout en découvrant le patrimoine de leur ville ?</p>
                 <p><strong>La solution :</strong> Nous avons conçu l'interface d'une application mobile qui transforme la balade en jeu : carte interactive, filtres de lieux et badges de succès.</p>
                 <p>Vous pouvez naviguer dans le prototype interactif ci-dessous :</p>
