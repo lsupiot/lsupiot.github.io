@@ -1,167 +1,238 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Lucas Supiot</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio 3D - Lucas Supiot</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="dark" data-daltonism="normal">
-    <header class="global-header" role="banner">
-        <button class="header-link" type="button" id="home-button" aria-label="Retour à l’accueil">Lucas.</button>
-        <h1 class="header-title">De l'idée à l'écran</h1>
-        <button class="header-link" type="button" id="contact-button" aria-label="Aller à la page contact">Contact</button>
-    </header>
-
-    <div class="app-shell">
-        <aside class="sidebar panel panel-left" aria-label="Navigation Pages et Layers">
-            <div class="panel-header">
-                <p class="panel-label">Pages</p>
-                <h1 class="panel-title">Portfolio</h1>
-            </div>
-
-            <nav class="panel-body" aria-label="Liste des sections du portfolio">
-                <div class="sidebar-split">
-                    <section class="sidebar-section sidebar-pages" aria-labelledby="sidebar-pages-title">
-                        <h2 id="sidebar-pages-title" class="sidebar-section-title">Pages</h2>
-                        <ul class="nav-list" role="list">
-                            <li><button class="nav-item active" type="button" data-section="accueil" aria-controls="canvas-content">Présentation</button></li>
-                            <li><button class="nav-item" type="button" data-section="ux" aria-controls="canvas-content">Projets UX/UI</button></li>
-                            <li><button class="nav-item" type="button" data-section="projets" aria-controls="canvas-content">Projets Dev</button></li>
-                            <li><button class="nav-item" type="button" data-section="contact" aria-controls="canvas-content">Contact</button></li>
-                        </ul>
-                    </section>
-
-                    <section class="sidebar-section sidebar-layers" aria-labelledby="sidebar-layers-title">
-                        <h2 id="sidebar-layers-title" class="sidebar-section-title">Layers</h2>
-                        <ul class="layer-list" role="list">
-                            <li><button class="layer-item" type="button" data-scroll-target="area-parcours">Parcours</button></li>
-                            <li><button class="layer-item" type="button" data-scroll-target="area-experiences">Expériences</button></li>
-                            <li><button class="layer-item" type="button" data-scroll-target="area-objectif">Objectif</button></li>
-                            <li><button class="layer-item" type="button" data-scroll-target="area-scanart">Scan'Art</button></li>
-                            <li><button class="layer-item" type="button" data-scroll-target="area-metz-tour">Metz Tour</button></li>
-                        </ul>
-                    </section>
-                </div>
+<body class="home">
+    <main class="page">
+        <section class="left-panel">
+            <nav class="site-nav" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#cv">CV 3D</a>
+                <a href="prototype-3d.html">Portfolio</a>
             </nav>
 
-            <div class="panel-footer">
-                <p class="panel-note">Cliquez sur un item pour mettre à jour le canvas central sans recharger la page.</p>
-            </div>
-        </aside>
-
-        <main class="canvas panel panel-center" id="canvas-content" role="main">
-            <section class="canvas-frame" id="canvas-frame" aria-labelledby="canvas-title" tabindex="-1">
-                <div class="canvas-topbar" id="canvas-topbar" tabindex="-1">
-                    <span class="canvas-badge">Canvas</span>
-                    <h2 id="canvas-title">👋 Bonjour, je suis Lucas SUPIOT</h2>
+            <section class="intro">
+                <span class="badge">Portfolio 3D</span>
+                <h1>Lucas Supiot — Développeur Front-end & UX/UI</h1>
+                <p>Un CV en 3D interactif qui met en avant tes meilleurs projets. Clique sur une ligne pour voir l’aperçu, puis accède à la page dédiée pour découvrir chaque réalisation.</p>
+                <div class="project-panel" aria-live="polite">
+                    <h2 id="project-title">Sélectionne une ligne du CV</h2>
+                    <p class="subtitle" id="project-subtitle">Chaque ligne représente une expérience stratégique. Le détail s'affichera ici avant de cliquer vers la page du projet.</p>
+                    <div class="tags" id="project-tags"></div>
+                    <p class="description" id="project-description">Ce portfolio met en valeur ton parcours avec une approche visuelle immersive et professionnelle.</p>
+                    <a id="project-link" class="project-link" href="scanart.html">Voir le projet</a>
                 </div>
+            </section>
+        </section>
 
-                <article class="canvas-copy" id="canvas-copy" tabindex="-1">
-                    <div class="profile-grid">
+        <section class="scene" id="cv" aria-label="Carte 3D du CV">
+            <article class="cv-card" id="cv-card">
+                <div class="cv-title">Curriculum Vitae</div>
+                <div class="cv-meta">
+                    <span><strong>Nom :</strong> Lucas Supiot</span>
+                    <span><strong>Localisation :</strong> Strasbourg / Grand Est</span>
+                </div>
+                <div class="cv-lines" id="cv-lines">
+                    <button class="cv-line" data-id="0" style="--index: 0;" type="button">
+                        <span class="index">00</span>
                         <div>
-                            <p class="lead-copy" id="canvas-lead"><strong>Je m'appelle Lucas et je suis Développeur FS de formation, avec une passion grandissante pour l'UX/UI Design.</strong></p>
-                            <p id="canvas-text">Je souhaite combiner l'exigence créative du design avec mon bagage technique pour concevoir des solutions immersives, performantes et accessibles à tous.</p>
+                            <h3>Cherche : ALTERNANCE UI / WEBDESIGNER</h3>
+                            <p>Recherche d'une alternance UI / Webdesigner de 1 an pour un projet professionnel concret.</p>
                         </div>
-                        <div class="hero-card accent-panel">
-                            <h3>Profil hybride</h3>
-                            <p>Un parcours technique et créatif, orienté vers le concret, le prototypage et l'expérience utilisateur.</p>
+                    </button>
+                    <button class="cv-line" data-id="1" style="--index: 1;" type="button">
+                        <span class="index">01</span>
+                        <div>
+                            <h3>Scan'Art — Design d'une application mobile</h3>
+                            <p>Prototype UX/UI pour le Musée d'Histoire Naturelle, parcours visiteur et accessibilité.</p>
                         </div>
-                    </div>
-
-                    <section id="area-parcours" class="profile-section">
-                        <h3>Mon parcours</h3>
-                        <p>Depuis gamin, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.</p>
-                        <p>C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France, en Moselle, et plus précisément à Metz en Master d'Ergonomie.</p>
-                        <div class="profile-timeline">
-                            <div><strong>Bac pro Informatique :</strong> premières bases en pratique et découverte du développement.</div>
-                            <div><strong>Bac STI2D :</strong> apprentissage de la théorie pour mieux comprendre les fondations techniques.</div>
-                            <div><strong>BUT Informatique à La Rochelle :</strong> trois années pour acquérir de solides bases en réalisation d'applications et en programmation.</div>
-                            <div><strong>Alternance C++ mobile :</strong> immersion technique avec un focus sur les applications mobiles.</div>
-                            <div><strong>Master d'Ergonomie à Metz :</strong> découverte de la psychologie cognitive, de la méthodologie des tests utilisateurs, des neurosciences comportementales et de l'ergonomie organisationnelle.</div>
+                    </button>
+                    <button class="cv-line" data-id="2" style="--index: 2;" type="button">
+                        <span class="index">02</span>
+                        <div>
+                            <h3>Metz Tour — Prototype de gamification urbaine</h3>
+                            <p>Application de voyage urbain avec parcours, badges et interface immersive.</p>
                         </div>
-                        <p class="section-note">Cette formation m'a apporté une vision riche, mais trop théorique : j'ai décidé de m'arrêter pour revenir à ce qui m'anime vraiment, à savoir le prototypage, la pratique et la création concrète.</p>
-                    </section>
-
-                    <section id="area-experiences" class="profile-section">
-                        <h3>Expériences significatives</h3>
-                        <ul class="profile-list">
-                            <li><strong>Musée d'Histoire Naturelle de La Rochelle :</strong> Product Owner et Développeur Mobile, j'ai co-créé Scan'Art, une application gamifiée pour digitaliser le parcours visiteur. J'y ai découvert Figma pour la conception de l'Atomic Design, organisé des tests itératifs avec le public, et participé au développement sous Flutter.</li>
-                            <li><strong>Skydrone Robotics :</strong> lors de mon alternance, j'ai analysé et refondu l'ergonomie des interfaces de télémétrie de drones. Mon travail consistait à traduire les besoins du terrain en maquettes fonctionnelles, puis à les intégrer techniquement pour réduire la charge cognitive des pilotes et faciliter les missions de vol.</li>
-                            <li><strong>Smart-Campus :</strong> j'ai œuvré en tant que Webdesigner et Développeur FS pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.</li>
-                        </ul>
-                    </section>
-
-                    <section id="area-objectif" class="profile-section">
-                        <h3>Mon objectif</h3>
-                        <p>Aujourd'hui, je suis activement à la recherche d'une alternance en UI / Webdesign pour une durée d'un an. Je suis prêt à m'investir pour transformer des besoins complexes en interfaces fluides, de la phase d'idéation jusqu'à l'intégration technique.</p>
-                    </section>
-                </article>
-
-                <div class="canvas-media" id="canvas-media" tabindex="-1">
-                    <section class="canvas-card canvas-iframe-card" id="canvas-prototype-card" aria-labelledby="iframe-label" tabindex="-1">
-                        <div class="iframe-header">
-                            <span id="iframe-label">Iframe prototype</span>
+                    </button>
+                    <button class="cv-line" data-id="3" style="--index: 3;" type="button">
+                        <span class="index">03</span>
+                        <div>
+                            <h3>Skydrone Robotics — Interfaces de drone</h3>
+                            <p>Refonte de la télémétrie et amélioration de l'expérience des pilotes.</p>
                         </div>
-                        <p class="canvas-caption" id="canvas-image-caption"></p>
-                        <iframe class="canvas-iframe" id="canvas-iframe" title="Aperçu prototype" src="about:blank" loading="lazy"></iframe>
-                    </section>
+                    </button>
+                    <button class="cv-line" data-id="4" style="--index: 4;" type="button">
+                        <span class="index">04</span>
+                        <div>
+                            <h3>Portfolio 3D — CV interactif</h3>
+                            <p>Présentation d'un CV immersif avec navigation vers chaque projet.</p>
+                        </div>
+                    </button>
                 </div>
-            </section>
-        </main>
+            </article>
+        </section>
+    </main>
 
-        <aside class="sidebar panel panel-right" aria-label="Outils d’accessibilité et ergonomie">
-            <div class="panel-header">
-                <p class="panel-label">Properties</p>
-                <h1 class="panel-title">Outils</h1>
-            </div>
+    <script>
+        const projects = {
+            0: {
+                title: "Recherche : Alternance UI / Webdesigner",
+                subtitle: "Je suis actuellement à la recherche d'une alternance UI / Webdesigner de 1 an.",
+                tags: ["Alternance", "UI", "Webdesign", "Candidature"],
+                description: "Je recherche une alternance pour mettre en pratique mes compétences en UX/UI, design d'interface et développement web au service de projets concrets.",
+                url: "#apropos"
+            },
+            1: {
+                title: "Scan'Art — Application mobile culturelle",
+                subtitle: "Prototype UX/UI pour digitaliser le parcours musée et guider le visiteur.",
+                tags: ["UX Research", "UI Design", "Accessibilité", "Prototype mobile"],
+                description: "Conception d'une interface fluide pour accompagner les visiteurs avec des parcours thématiques, des informations contextuelles et des repères adaptés aux besoins cognitifs.",
+                url: "scanart.html"
+            },
+            2: {
+                title: "Metz Tour — Prototype de gamification urbaine",
+                subtitle: "Application de voyage urbain qui mêle parcours, badges et contenu interactif.",
+                tags: ["Gamification", "UX", "Prototype", "Tourisme"],
+                description: "Création d'une expérience ludique de visite urbaine, avec filtres de lieux, parcours personnalisés et interface immersive.",
+                url: "metz-tour.html"
+            },
+            3: {
+                title: "Skydrone Robotics — Dashboard de contrôle",
+                subtitle: "Refonte d'indicateurs de télémétrie pour réduire la charge cognitive des pilotes.",
+                tags: ["Front-end", "Visualisation", "Interaction", "Pilotage"],
+                description: "Amélioration de l'ergonomie des écrans de commande, priorisation des alertes et repères visuels pour une prise de décision plus rapide et plus sûre.",
+                url: "skydrone.html"
+            },
+            4: {
+                title: "Portfolio 3D — CV interactif",
+                subtitle: "Présentation d'un CV immersif avec navigation vers chaque projet.",
+                tags: ["3D", "Animation", "Interaction", "Portfolio"],
+                description: "Ce portfolio met en avant une interface immersive et une navigation fluide vers les projets clés.",
+                url: "prototype-3d.html"
+            }
+        };
 
-            <section class="control-panel" aria-labelledby="theme-controls-title">
-                <div class="control-heading">
-                    <p class="control-label">Thème</p>
-                    <h2 id="theme-controls-title">Mode couleur</h2>
-                </div>
-                <button class="control-button" type="button" data-action="toggle-theme" aria-pressed="false">Activer mode clair</button>
-            </section>
+        const projectTitle = document.getElementById('project-title');
+        const projectSubtitle = document.getElementById('project-subtitle');
+        const projectTags = document.getElementById('project-tags');
+        const projectDescription = document.getElementById('project-description');
+        const projectLink = document.getElementById('project-link');
+        const lines = document.querySelectorAll('.cv-line');
+        const card = document.getElementById('cv-card');
 
-            <details class="control-panel" open>
-                <summary class="control-summary">Typographie</summary>
-                <div class="control-grid">
-                    <button class="control-button" type="button" data-action="decrease-font">A-</button>
-                    <button class="control-button" type="button" data-action="increase-font">A+</button>
-                </div>
-            </details>
+        function selectProject(id) {
+            const project = projects[id];
+            if (!project) return;
+            projectTitle.textContent = project.title;
+            projectSubtitle.textContent = project.subtitle;
+            projectDescription.textContent = project.description;
+            projectLink.href = project.url;
+            projectLink.textContent = 'Découvrir le projet';
+            projectTags.innerHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            lines.forEach(line => {
+                line.classList.toggle('active', line.dataset.id === id.toString());
+            });
+        }
 
-            <details class="control-panel" open>
-                <summary class="control-summary">Palette daltonienne</summary>
-                <div class="control-group">
-                    <label class="select-label" for="daltonism-select">
-                        <span>Mode daltonisme</span>
-                        <select id="daltonism-select" aria-label="Choisir une palette daltonienne">
-                            <option value="normal">Normal</option>
-                            <option value="protanopia">Protanopie</option>
-                            <option value="deuteranopia">Déuteranopie</option>
-                            <option value="tritanopia">Tritanopie</option>
-                        </select>
-                    </label>
-                    <button class="control-button" type="button" data-action="toggle-contrast" aria-pressed="false">Contraste élevé</button>
-                </div>
-            </details>
+        lines.forEach(line => {
+            line.addEventListener('mouseover', () => selectProject(line.dataset.id));
+            line.addEventListener('click', () => {
+                window.location.href = projects[line.dataset.id].url;
+            });
+        });
 
-            <details class="control-panel" open>
-                <summary class="control-summary">Confort de lecture</summary>
-                <div class="control-grid">
-                    <button class="control-button" type="button" data-action="toggle-line-spacing" aria-pressed="false">Interlignage</button>
-                    <button class="control-button" type="button" data-action="toggle-letter-spacing" aria-pressed="false">Espacement</button>
-                </div>
-            </details>
+        card.addEventListener('mousemove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const dx = (event.clientX - rect.left) / rect.width - 0.5;
+            const dy = (event.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `rotateX(${15 - dy * 18}deg) rotateY(${-18 + dx * 18}deg)`;
+        });
 
-            <div class="panel-footer">
-                <p class="panel-note">Tous les réglages s’appliquent immédiatement sur le canvas central, sans recharger la page.</p>
-            </div>
-        </aside>
-    </div>
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateX(18deg) rotateY(-18deg)';
+        });
 
-    <script src="script.js"></script>
+        selectProject(0);
+    </script>
+
+    <section class="about-section" id="apropos">
+        <div class="about-card">
+            <h2>À propos</h2>
+            <p>Je m'appelle Lucas et je suis Développeur Full-Stack de formation, avec une passion grandissante pour l'UX/UI Design. Je souhaite combiner l'exigence créative du design avec mon bagage technique pour concevoir des solutions immersives, performantes et accessibles à tous.</p>
+
+            <h3>Profil hybride</h3>
+            <p>Un parcours technique et design orienté vers la pratique, le prototypage et l'expérience utilisateur.</p>
+
+            <h3>Mon parcours</h3>
+            <p>Depuis petit, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.</p>
+            <p>Par la suite, j'intègre le BUT Informatique à l'IUT de La Rochelle qui mêle pratique et théorie. Durant mes 3 années là-bas, j'ai acquis de solides bases en réalisation d'applications et en programmation. J'y ai découvert trois grands domaines du développement : l'applicatif, le web et le mobile. J'ai également eu la chance de pouvoir faire ma troisième année en alternance sur de l'applicatif C++ à destination du mobile. C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France en Moselle, et plus précisément à Metz, en Master d'Ergonomie.</p>
+            <ul>
+                <li><strong>Bac pro Informatique :</strong> premières bases en pratique, découverte du développement et de l'univers tech.</li>
+                <li><strong>Bac STI2D :</strong> apprentissage de la théorie pour mieux comprendre les fondations techniques.</li>
+                <li><strong>BUT Informatique à La Rochelle :</strong> trois années pour acquérir de solides bases en réalisation d'applications et en programmation.</li>
+                <li><strong>Alternance en applicatif C++ mobile :</strong> immersion professionnelle axée sur les solutions mobiles.</li>
+                <li><strong>Master d'Ergonomie à Metz :</strong> exploration de la psychologie cognitive, de la méthodologie des tests utilisateurs, des neurosciences comportementales, de l'ergonomie organisationnelle et de l'anatomie du corps humain.</li>
+            </ul>
+            <p>À travers ce long périple, j'ai découvert que j'aspirais surtout à la pratique concrète : le besoin de prototypage, de conception et de création m'a amené à arrêter cette formation trop théorique.</p>
+
+            <h3>Expériences significatives</h3>
+            <ul>
+                <li><strong>Musée d'Histoire Naturelle de La Rochelle :</strong> en tant que Product Owner et Développeur Mobile, j'ai co-créé Scan'Art, une application gamifiée pour digitaliser le parcours visiteur. J'y ai découvert Figma pour la conception de l'Atomic Design, organisé des tests itératifs avec le public, et participé au développement sous Flutter.</li>
+                <li><strong>Skydrone Robotics :</strong> pendant mon alternance, j'ai analysé et refondu l'ergonomie des interfaces de télémétrie de drones. Mon travail a consisté à traduire les besoins du terrain en maquettes fonctionnelles puis à les intégrer techniquement, avec pour but de réduire la charge cognitive des pilotes et de faciliter les missions de vol.</li>
+                <li><strong>Smart-Campus :</strong> j'ai œuvré en tant que Webdesigner et Développeur Full-Stack pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.</li>
+            </ul>
+
+            <h3>Mon objectif</h3>
+            <p>Aujourd'hui, je suis activement à la recherche d'une alternance en UI / Webdesign pour une durée d'un an. Je suis prêt à m'investir pour transformer des besoins complexes en interfaces fluides, de la phase d'idéation jusqu'à l'intégration technique.</p>
+
+            <h3>Développement Full-Stack</h3>
+            <p>Mon approche du développement est guidée par l'optimisation, la maintenabilité et la qualité de l'interface utilisateur. Je couvre toute la chaîne technique, avec un focus particulier sur l'architecture, la fiabilité et la performance des applications.</p>
+
+            <h3>Scan'Art : Architecture Mobile et Backend</h3>
+            <p>Sur ce projet de 6 mois, j'ai occupé le rôle de Product Owner (méthode Agile/Scrum) et de Développeur Mobile.</p>
+            <ul>
+                <li><strong>Front-End (Flutter/Dart) :</strong> intégration front-end avec une architecture Clean Code respectant les maquettes Figma.</li>
+                <li><strong>Tests et Qualité :</strong> rédaction de tests BDD (Behavior Driven Development) et analyse via SonarQube (89.8% de couverture de code, zéro vulnérabilité).</li>
+                <li><strong>Back-End Optimisé :</strong> API PHP conteneurisée via Docker Multi-stage. Optimisation du stockage des ressources avec un bucket MinIO et conversion des images au format WebP.</li>
+            </ul>
+
+            <h3>Skydrone Robotics (Alternance)</h3>
+            <p>Développement d'applications et d'interfaces pour l'industrie des drones. Traduction des besoins terrain complexes en maquettes fonctionnelles. Développement et intégration de composants graphiques en C++, QML et Qt pour la station de contrôle. QGroundControl — interface de contrôle du drone en alternance.</p>
+
+            <h3>Smart-Campus (Projet Web)</h3>
+            <ul>
+                <li>Intégration HTML5, CSS3 et JavaScript.</li>
+                <li>Data Visualization : utilisation de la librairie Chart.js pour concevoir des graphiques interactifs.</li>
+                <li>Conception d'un système d'alertes intelligentes basé sur une micro-copy soignée.</li>
+                <li>Architecture logicielle et développement front-end.</li>
+            </ul>
+
+            <h3>Projets UX/UI et Prototypage</h3>
+            <p>Mes conceptions reposent sur des méthodes éprouvées : Design Thinking, création de Personas, User Journeys et respect des normes d'accessibilité (WCAG/RGAA). Je mets en valeur la réflexion ergonomique dans chaque projet, du prototypage à la validation sur le terrain.</p>
+
+            <h3>Scan'Art : L'expérience muséale interactive</h3>
+            <p>Contexte : projet académique pour le Musée d'Histoire Naturelle de La Rochelle.</p>
+            <p>Objectifs : fluidifier la visite des enfants et donner envie de revenir grâce à des challenges, le tout jouable en totale autonomie (sans médiateurs) et hors ligne.</p>
+            <p>UI Design et Atomic Design : conception d'une bibliothèque de composants graphiques sur Figma pour assurer la parfaite cohérence visuelle de l'application.</p>
+            <p>Personnalisation et Gamification : création d'une interface de création d'avatar pour immerger l'enfant dans l'aventure.</p>
+            <p>Recherche et Tests Utilisateurs : organisation de sessions de tests itératifs directement avec les visiteurs du musée pour ajuster l'ergonomie et valider l'histoire.</p>
+
+            <h3>Metz Tour : Gamification et Exploration Urbaine</h3>
+            <p>Le défi : comment inciter les touristes et les habitants de Metz à pratiquer une activité physique tout en découvrant le patrimoine de leur ville ?</p>
+            <p>La solution : nous avons conçu l'interface d'une application mobile qui transforme la balade en jeu : carte interactive, filtres de lieux et badges de succès.</p>
+            <p>Vous pouvez naviguer dans le prototype interactif ci-dessous.</p>
+            <p><a href="https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share" target="_blank" rel="noopener noreferrer">Voir le prototype Metz Tour</a></p>
+
+            <h3>Me contacter</h3>
+            <p>Si mon profil correspond à vos besoins pour une alternance UI / Webdesigner de 1 an, n'hésitez pas à me contacter directement ! Je suis disponible pour échanger sur vos projets de développement web, UX/UI et design d'interface.</p>
+            <p><strong>Email :</strong> lucas.supiot2@gmail.com</p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/lucas-supiot/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/lucas-supiot/</a></p>
+            <p><strong>GitHub :</strong> <a href="https://github.com/lsupiot" target="_blank" rel="noopener noreferrer">https://github.com/lsupiot</a></p>
+        </div>
+    </section>
 </body>
 </html>

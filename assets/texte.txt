@@ -1,0 +1,84 @@
+Je m'appelle Lucas et je suis Développeur Full-Stack de formation, avec une passion grandissante pour l'UX/UI Design.   
+Je souhaite combiner l'exigence créative du design avec mon bagage technique pour concevoir des solutions immersives, performantes et accessibles à tous.  
+                      
+                       
+Profil hybride   
+Un parcours technique et design orienté vers la pratique, le prototypage et l'expérience utilisateur.  
+                      
+                  
+
+                  
+Mon parcours   
+Depuis petit, j'adore la tech et surtout les jeux vidéo. On m'oriente alors vers l'informatique : c'est là que mon parcours dans ce domaine a débuté. À la sortie du collège, voulant rentrer dans le concret, je pars en bac pro informatique. Une année intéressante, mais manquant de théorie. Je me réoriente donc vers un bac techno STI2D où je viens combler ma pratique avec de la théorie.  
+Par la suite, j'intègre le BUT Informatique à l'IUT de La Rochelle qui mêle pratique et théorie. Durant mes 3 années là-bas, j'ai acquis de solides bases en réalisation d'applications et en programmation. J'y ai découvert trois grands domaines du développement : l'applicatif, le web et le mobile. J'ai également eu la chance de pouvoir faire ma troisième année en alternance sur de l'applicatif C++ à destination du mobile. C'est au fil de mes études que j'ai eu un véritable déclic pour l'UX/UI, notamment lors de mon projet de fin d'études. Désireux d'approfondir cette passion naissante, je pars à l'autre bout de la France en Moselle, et plus précisément à Metz, en Master d'Ergonomie.                         
+Bac pro Informatique :  premières bases en pratique, découverte du développement et de l'univers tech.  
+Bac STI2D :  apprentissage de la théorie pour mieux comprendre les fondations techniques.  
+BUT Informatique à La Rochelle :  trois années pour acquérir de solides bases en réalisation d'applications et en programmation.  
+Alternance en applicatif C++ mobile :  immersion professionnelle axée sur les solutions mobiles.  
+Master d'Ergonomie à Metz :  exploration de la psychologie cognitive, de la méthodologie des tests utilisateurs, des neurosciences comportementales, de l'ergonomie organisationnelle et de l'anatomie du corps humain.  
+                      
+À travers ce long périple, j'ai découvert que j'aspirais surtout à la pratique concrète : le besoin de prototypage, de conception et de création m'a amené à arrêter cette formation trop théorique.  
+
+Expériences significatives   
+                     
+Musée d'Histoire Naturelle de La Rochelle :  en tant que Product Owner et Développeur Mobile, j'ai co-créé Scan'Art, une application gamifiée pour digitaliser le parcours visiteur. J'y ai découvert Figma pour la conception de l'Atomic Design, organisé des tests itératifs avec le public, et participé au développement sous Flutter.  
+
+Skydrone Robotics :  pendant mon alternance, j'ai analysé et refondu l'ergonomie des interfaces de télémétrie de drones. Mon travail a consisté à traduire les besoins du terrain en maquettes fonctionnelles puis à les intégrer techniquement, avec pour but de réduire la charge cognitive des pilotes et de faciliter les missions de vol.  
+
+Smart-Campus :  j'ai œuvré en tant que Webdesigner et Développeur Full-Stack pour concevoir un dashboard web interactif, en mettant l'accent sur la Data Visualization.  
+
+Mon objectif   
+Aujourd'hui, je suis activement à la recherche d'une alternance en UI / Webdesign pour une durée d'un an. Je suis prêt à m'investir pour transformer des besoins complexes en interfaces fluides, de la phase d'idéation jusqu'à l'intégration technique.  
+
+Lucas Supiot - Développeur Front-end et UX/UI Designer
+
+Développement Full-Stack
+
+Mon approche du développement est guidée par l'optimisation, la maintenabilité et la qualité de l'interface utilisateur.  
+Je couvre toute la chaîne technique, avec un focus particulier sur l'architecture, la fiabilité et la performance des applications.  
+
+Scan'Art : Architecture Mobile et Backend   
+Sur ce projet de 6 mois, j'ai occupé le rôle de Product Owner (méthode Agile/Scrum) et de Développeur Mobile.  
+
+Front-End (Flutter/Dart)  : Intégration front-end avec une architecture Clean Code respectant les maquettes Figma.  
+Tests et Qualité  : Rédaction de tests BDD (Behavior Driven Development) et analyse via SonarQube (89.8% de couverture de code, zéro vulnérabilité).  
+Back-End Optimisé  : API PHP conteneurisée via Docker Multi-stage. Optimisation du stockage des ressources avec un bucket MinIO et conversion des images au format WebP.  
+
+Scan'Art — Tableau de bord et gestion du travail. figcaption 
+
+
+Skydrone Robotics (Alternance)   
+Développement d'applications et d'interfaces pour l'industrie des drones.  
+Traduction des besoins terrain complexes en maquettes fonctionnelles.  
+Développement et intégration de composants graphiques en    C++, QML et Qt  pour la station de contrôle.  
+QGroundControl — interface de contrôle du drone en alternance.
+Smart-Campus (Projet Web)   
+Intégration HTML5, CSS3 et JavaScript.  
+Data Visualization  : utilisation de la librairie Chart.js pour concevoir des graphiques interactifs.  
+Conception d'un système d'alertes intelligentes basé sur une micro-copy soignée.  
+Architecture logicielle et développement front-end',
+Projets UX/UI et Prototypage',
+Mes conceptions reposent sur des méthodes éprouvées : Design Thinking, création de Personas, User Journeys et respect des normes d'accessibilité (WCAG/RGAA).  
+Je mets en valeur la réflexion ergonomique dans chaque projet, du prototypage à la validation sur le terrain.  
+Scan'Art : L'expérience muséale interactive   
+Contexte :  Projet académique pour le Musée d'Histoire Naturelle de La Rochelle.  
+Objectifs :  Fluidifier la visite des enfants et donner envie de revenir grâce à des challenges, le tout jouable en totale autonomie (sans médiateurs) et hors ligne.  
+UI Design et; Atomic Design :  Conception d'une bibliothèque de composants graphiques sur Figma pour assurer la parfaite cohérence visuelle de l'application.  
+Personnalisation et Gamification :  Création d'une interface de création d'avatar pour immerger l'enfant dans l'aventure.  
+Recherche et Tests Utilisateurs :  Organisation de sessions de tests itératifs directement avec les visiteurs du musée pour ajuster l'ergonomie et valider l'histoire.  
+Démonstration du parcours utilisateur : 
+
+Metz Tour : Gamification et Exploration Urbaine   
+Le défi :  Comment inciter les touristes et les habitants de Metz à pratiquer une activité physique tout en découvrant le patrimoine de leur ville ?  
+La solution :  Nous avons conçu l'interface d'une application mobile qui transforme la balade en jeu : carte interactive, filtres de lieux et badges de succès.  
+Vous pouvez naviguer dans le prototype interactif ci-dessous :  
+UX/UI prototypes et parcours utilisateur
+https://embed.figma.com/proto/jrErI9CJrKEsVj4S0vZ2EP/Metz-Tour?page-id=1139%3A2404&node-id=1139-2405&p=f&viewport=359%2C181%2C0.16&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1139%3A2405&embed-host=share
+
+Me Contacter
+Si mon profil correspond à vos besoins pour une    Alternance UI / Webdesigner de 1 an , n'hésitez pas à me contacter directement !  
+Je suis disponible pour échanger sur vos projets de développement web, UX/UI et design d'interface.  
+
+Email :   lucas.supiot2@gmail.com
+LinkedIn :   https://www.linkedin.com/in/lucas-supiot/ 
+GitHub :   https://github.com/lsupiot 
